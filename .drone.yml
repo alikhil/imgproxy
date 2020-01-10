@@ -1,0 +1,10 @@
+kind: pipeline
+type: docker
+name: imgproxy
+
+
+steps:
+  - name: lint
+    image: golangci/golangci-lint:v1.22.2
+    commands: 
+      - golangci-lint run .
